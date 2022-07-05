@@ -6,6 +6,7 @@ spec:
     env: example
     team: product
   input:
+    namespace: kek-lol
     manifests:
       - deployment.yaml
       - service.yaml
