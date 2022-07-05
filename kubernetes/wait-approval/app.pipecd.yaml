@@ -11,21 +11,18 @@ spec:
         with:
           replicas: 10%
       - name: WAIT_APPROVAL
-        with:
-          approvers:
-            - nghialv
       - name: K8S_PRIMARY_ROLLOUT
       - name: K8S_CANARY_CLEAN
-  notification:
-    mentions:
-      - event: DEPLOYMENT_WAIT_APPROVAL
-        slack:
-          - slack-user-id-1  # slack-user-name-1
-          - slack-user-id-2  # slack-user-name-2
-      # Specifying "*" means mentioning the given users for all events.
-      - event: "*"
-        slack:
-          - slack-user-id-3  # slack-user-name-3
+#   notification:
+#     mentions:
+#       - event: DEPLOYMENT_WAIT_APPROVAL
+#         slack:
+#           - slack-user-id-1  # slack-user-name-1
+#           - slack-user-id-2  # slack-user-name-2
+#       # Specifying "*" means mentioning the given users for all events.
+#       - event: "*"
+#         slack:
+#           - slack-user-id-3  # slack-user-name-3
   description: |
     This app demonstrates how to configure a Kubernetes app with a WAIT_APPROVAL stage.\
     This ensures that all deployments of this app must be approved manually on the web console.\
