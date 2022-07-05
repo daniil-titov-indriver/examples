@@ -3,6 +3,13 @@
 apiVersion: pipecd.dev/v1beta1
 kind: KubernetesApp
 spec:
+  pipeline:
+    stages:
+      - name: K8S_CANARY_ROLLOUT
+      - name: WAIT_APPROVAL
+        with:
+          timeout: 6h
+      - name: K8S_PRIMARY_ROLLOUT
   name: helm-local-chart
   labels:
     env: example
