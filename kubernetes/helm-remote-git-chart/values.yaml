@@ -1,0 +1,10 @@
+service:
+  port: 8081
+  
+resources: {}
+  limits:
+    cpu: 111m
+    memory: 133Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
