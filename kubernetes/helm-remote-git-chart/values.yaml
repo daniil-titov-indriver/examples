@@ -1,7 +1,7 @@
 service:
   port: 8081
   
-resources: {}
+resources: 
   limits:
     cpu: 111m
     memory: 133Mi
